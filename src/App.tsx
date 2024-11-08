@@ -1,19 +1,15 @@
 import * as React from "react"
 import { useState } from "react"
 
+import { Inicio } from "./Inicio"
+
 export function App() {
-	const [text, setText] = useState("Hello")
+	const jogando = useState(false)
+
 	return (
-		<div>
-			<h1 className="bg-blue-500">Hello React!</h1>
-			<p>{text}</p>
-			<button type="button" onClick={increment}>
-				Teste
-			</button>
+		<div className="bg-gray-200 w-screen h-screen flex justify-center greenWavesBG">
+			{/* Conteúdo */}
+			<Inicio />
 		</div>
 	)
-
-	function increment() {
-		setText(`${text} world`)
-	}
 }
